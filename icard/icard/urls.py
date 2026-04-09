@@ -21,6 +21,7 @@ from itinerario.api.router import router as router_itinerario
 
 from django.contrib import admin
 from django.urls import path , include
+from rest_framework_simplejwt.views import TokenRefreshView  # ← 
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -39,6 +40,7 @@ urlpatterns = [
     path('api/', include(router_user.urls)),
     path('api/', include(router_itinerario.urls)),
     path('api/', include('users.api.router')),      # auth/login, auth/register, auth/me
+    path('api/auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),  # ← agregar
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
