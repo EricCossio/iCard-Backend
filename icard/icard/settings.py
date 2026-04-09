@@ -117,7 +117,10 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 15,
 }
 
-CORS_ALLOWED_ORIGINS = os.environ.get(
-    'CORS_ALLOWED_ORIGINS',
-    'http://localhost:5173'
-).split(',')
+# CORS_ALLOWED_ORIGINS = os.environ.get(
+#     'CORS_ALLOWED_ORIGINS',
+#     'http://localhost:5173'
+# ).split(',')
+
+# Al final del settings.py, reemplaza la última línea de CORS por esto:
+CORS_ALLOW_ALL_ORIGINS = True
