@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'users',
     'itinerario',
     'corsheaders',
+    'dj-database-url',
 ]
 
 MIDDLEWARE = [
