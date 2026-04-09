@@ -156,7 +156,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',  # ← tu frontend Vite
+    'https://icard-frontend.onrender.com/login',  # ← tu frontend Vite
 ]
 
 import os
